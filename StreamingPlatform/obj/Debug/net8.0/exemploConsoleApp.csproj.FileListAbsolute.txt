@@ -1,0 +1,14 @@
+C:\Bruno\university\CODE\exemploConsoleApp\bin\Debug\net8.0\exemploConsoleApp.exe
+C:\Bruno\university\CODE\exemploConsoleApp\bin\Debug\net8.0\exemploConsoleApp.deps.json
+C:\Bruno\university\CODE\exemploConsoleApp\bin\Debug\net8.0\exemploConsoleApp.runtimeconfig.json
+C:\Bruno\university\CODE\exemploConsoleApp\bin\Debug\net8.0\exemploConsoleApp.dll
+C:\Bruno\university\CODE\exemploConsoleApp\bin\Debug\net8.0\exemploConsoleApp.pdb
+C:\Bruno\university\CODE\exemploConsoleApp\obj\Debug\net8.0\exemploConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Bruno\university\CODE\exemploConsoleApp\obj\Debug\net8.0\exemploConsoleApp.AssemblyInfoInputs.cache
+C:\Bruno\university\CODE\exemploConsoleApp\obj\Debug\net8.0\exemploConsoleApp.AssemblyInfo.cs
+C:\Bruno\university\CODE\exemploConsoleApp\obj\Debug\net8.0\exemploConsoleApp.csproj.CoreCompileInputs.cache
+C:\Bruno\university\CODE\exemploConsoleApp\obj\Debug\net8.0\exemploConsoleApp.dll
+C:\Bruno\university\CODE\exemploConsoleApp\obj\Debug\net8.0\refint\exemploConsoleApp.dll
+C:\Bruno\university\CODE\exemploConsoleApp\obj\Debug\net8.0\exemploConsoleApp.pdb
+C:\Bruno\university\CODE\exemploConsoleApp\obj\Debug\net8.0\exemploConsoleApp.genruntimeconfig.cache
+C:\Bruno\university\CODE\exemploConsoleApp\obj\Debug\net8.0\ref\exemploConsoleApp.dll

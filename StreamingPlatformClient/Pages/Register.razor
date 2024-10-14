@@ -1,0 +1,45 @@
+﻿@page "/register"
+@inject HttpClient Http
+
+<h3>Registrar</h3>
+
+<EditForm Model="user" OnValidSubmit="HandleRegister">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>Nome de Usuário:</label>
+        <InputText @bind-Value="user.Username" />
+    </div>
+    <div>
+        <label>Email:</label>
+        <InputText @bind-Value="user.Email" />
+    </div>
+    <div>
+        <label>Senha:</label>
+        <InputText @bind-Value="user.Password" type="password" />
+    </div>
+    <button type="submit">Registrar</button>
+</EditForm>
+
+@code {
+    private UserRegister user = new UserRegister();
+
+    private async Task HandleRegister()
+    {
+        var response = await Http.PostAsJsonAsync("http://localhost:5000/api/auth/register", user);
+        if (response.IsSuccessStatusCode)
+        {
+            // Redirecionar para o Dashboard após registro
+            NavigationManager.NavigateTo("/dashboard");
+        }
+    }
+
+    public class UserRegister
+    {
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+    }
+}
+

@@ -1,0 +1,58 @@
+﻿@page "/login"
+@inject HttpClient Http
+
+<h3>Login</h3>
+
+@if (error != null)
+{
+    <p style="color:red">@error</p>
+}
+
+<EditForm Model="user" OnValidSubmit="HandleLogin">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>Email:</label>
+        <InputText @bind-Value="user.Email" />
+    </div>
+    <div>
+        <label>Senha:</label>
+        <InputText @bind-Value="user.Password" type="password" />
+    </div>
+    <button type="submit">Login</button>
+</EditForm>
+
+@code {
+    private UserLogin user = new UserLogin();
+    private string error;
+
+    private async Task HandleLogin()
+    {
+        try
+        {
+            var response = await Http.PostAsJsonAsync("http://localhost:5000/api/auth/login", user);
+            if (response.IsSuccessStatusCode)
+            {
+                // Armazenar o token JWT
+                var token = await response.Content.ReadAsStringAsync();
+                // Redirecionar para o Dashboard
+                NavigationManager.NavigateTo("/dashboard");
+            }
+            else
+            {
+                error = "Credenciais inválidas.";
+            }
+        }
+        catch
+        {
+            error = "Erro ao realizar login.";
+        }
+    }
+
+    public class UserLogin
+    {
+        public string Email { get; set; }
+        public string Password { get; set; }
+    }
+}
